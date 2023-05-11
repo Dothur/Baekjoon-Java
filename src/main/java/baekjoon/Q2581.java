@@ -8,9 +8,12 @@ public class Q2581 {
         int startNum = sc.nextInt();
         int endNum = sc.nextInt();
         int sum = 0;
+        // 입력은 무조건 자연수
         int min = -1;
         for (int i = startNum; i <= endNum; i++) {
+            // 먼저 true 값을 줌
             boolean isPrime = true;
+            // i 가 1이면 continue
             if (i < 2) {
                 continue;
             }
@@ -21,9 +24,11 @@ public class Q2581 {
                 }
             }
             if (isPrime) {
+                // 맨 처음값이 최소값
                 if (min == -1) {
                     min = i;
                 }
+                // 누적합
                 sum += i;
             }
         }
